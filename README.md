@@ -78,7 +78,107 @@ pip install pandas numpy scikit-learn matplotlib seaborn xgboost
 
 ### Dataset Setup
 
-1. **Download the Dataset**: Acquire the datasets required for this project. Ensure that the datasets are formatted correctly and placed in the appropriate directories. 
+1. **Download the Dataset**: Here's a detailed README file for your GitHub repository. This file explains the project structure, dataset, and steps to run the project.
+
+---
+
+# Image Analytics Assignment
+
+## Table of Contents
+
+- [Overview](#overview)
+- [File Structure](#file-structure)
+- [Dataset](#dataset)
+- [Setup Instructions](#setup-instructions)
+- [Running the Project](#running-the-project)
+- [License](#license)
+
+## Overview
+
+This repository contains the implementation of various image classification models using pre-trained features from a large image recognition model trained on the ImageNet dataset. The main goal of this project is to build models that can effectively classify images based on the provided dataset features and evaluate their performance.
+
+## File Structure
+
+The project directory is organized as follows:
+
+```
+IMAGEANALYTICSASSIGNMENT/
+│
+├── code/
+│   ├── Base_Model_Development.ipynb
+│   ├── Data_Preparation.ipynb
+│   ├── Logistic_Regression.ipynb
+│   ├── Random_Forest_Classifier.ipynb
+│   ├── Support_Vector_Machine.ipynb
+│   ├── XGBoost.ipynb
+│   └── validate.py
+│
+├── data/
+│   ├── features/
+│   │   ├── split_data/
+│   │   │   ├── train_1_split.csv
+│   │   │   ├── train_2_split.csv
+│   │   │   ├── val_1_split.csv
+│   │   │   └── val_2_split.csv
+│   │   ├── train_efficientformerv2_s0.snap_dist_in1k.csv
+│   │   ├── train_eva02_large_patch14_448.mim_m38m_ft_in22k_in1k.csv
+│   │   ├── v2_eva02_large_patch14_448.mim_m38m_ft_in22k_in1k.csv
+│   │   └── val_efficientformerv2_s0.snap_dist_in1k.csv
+│   └── images/
+│       └── imagenetv2-matched-frequency-format-val/
+```
+
+### Detailed Description of the Structure
+
+- **code/**: Contains Jupyter notebooks and Python scripts for model development and validation.
+  - `Base_Model_Development.ipynb`: Base model development for initial tests.
+  - `Data_Preparation.ipynb`: Preprocessing and preparation of the dataset.
+  - `Logistic_Regression.ipynb`: Implementation of the Logistic Regression model.
+  - `Random_Forest_Classifier.ipynb`: Implementation of the Random Forest Classifier.
+  - `Support_Vector_Machine.ipynb`: Implementation of the Support Vector Machine model.
+  - `XGBoost.ipynb`: Implementation of the XGBoost model.
+  - `validate.py`: Script to validate model performance.
+
+- **data/**: Contains datasets used for training and evaluation.
+  - **features/**: Contains CSV files with dataset features for training and validation.
+  - **images/**: Directory for storing images, including the ImageNet dataset.
+
+## Dataset
+
+The dataset used in this project can be downloaded from [Papers with Code - ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet). 
+
+You have been supplied with pre-trained features from a large image recognition model on the ImageNet training set. The relevant files include:
+- `train_eva02_large_patch14_448.mim_m38m_ft_in22k_in1k.csv`: Training features.
+- `val_eva02_large_patch14_448.mim_m38m_ft_in22k_in1k.csv`: Validation features.
+- `v2_eva02_large_patch14_448.mim_m38m_ft_in22k_in1k.csv`: Test set features.
+
+Please note that the dataset is large and may need to be uploaded separately.
+
+## Setup Instructions
+
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository_url>
+   cd IMAGEANALYTICSASSIGNMENT
+   ```
+
+2. **Install Required Libraries:**
+   Ensure you have Python 3.6 or higher installed. Then, create a virtual environment and install the required packages using `requirements.txt` (if available):
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Download the Dataset:**
+   Download the dataset from the link provided in the [Dataset](#dataset) section. Place the downloaded files in the appropriate directory as shown in the project structure.
+
+## Running the Project
+
+To run the project, follow these steps:
+
+1. Execute the `Data_Preparation.ipynb` notebook to preprocess the dataset and prepare the features for all models except the base model.
+
+2. Run the model-specific Jupyter notebooks (e.g., `Logistic_Regression.ipynb`, `XGBoost.ipynb`, etc.) to train and evaluate the models.
+
 
 2. **Directory Structure**: Organize your datasets within the `data/` directory, following the structure outlined in the project structure section. The required datasets should be placed as follows:
    - Place all split CSV files in `data/features/split_data/`.
